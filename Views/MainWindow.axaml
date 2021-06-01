@@ -13,7 +13,7 @@
     </Design.DataContext>
 
     <StackPanel>           
-        <Grid>           
+        <Grid DataContext="{Binding Product}">           
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
                 <ColumnDefinition Width="1.5*" MinWidth="300"/>

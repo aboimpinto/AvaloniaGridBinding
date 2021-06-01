@@ -1,39 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AvaloniaGridBinding.Models;
 using ReactiveUI;
 
 namespace AvaloniaGridBinding.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private string _name;
-        private string _status;
-        private string _expiresOn;
+        private Product _product;
 
-        public string Name 
+        public Product Product 
         { 
-            get => this._name;
-            set => this.RaiseAndSetIfChanged(ref this._name, value);
-        }
-
-        public string Status 
-        { 
-            get => this._status;
-            set => this.RaiseAndSetIfChanged(ref this._status, value);
-        }
-
-        public string ExpiresOn 
-        { 
-            get => this._expiresOn;
-            set => this.RaiseAndSetIfChanged(ref this._expiresOn, value);
+            get => this._product;
+            set => this.RaiseAndSetIfChanged(ref this._product, value); 
         }
 
         public MainWindowViewModel()
         {
-            this.Name = "Paulo Aboim Pinto";
-            this.Status = "ON";
-            this.ExpiresOn = "N/A";
+            this.Product = new Product
+            {
+                Name = "Paulo Aboim Pinto",
+                Status = "ON",
+                ExpiresOn = "N/A"
+            };
         }
     }
 }
