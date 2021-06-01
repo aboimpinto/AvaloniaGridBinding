@@ -12,6 +12,17 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel>           
+        <Grid>           
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="1.5*" MinWidth="300"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Name}" Grid.Column="0" />
+            <TextBlock Text="{Binding Status}" Grid.Column="1" />
+            <TextBlock Text="{Binding ExpiresOn}" Grid.Column="2" />
+        </Grid>
+    </StackPanel>
 
 </Window>
